@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+    <h1>Tarea: <small class="text-muted font-24">Eduardo's</small></h1>
+    <hr>
+    <div class="row">
+        <div class="col-4 col-sm-2">
+            <img class="row cursor-mano img-thumbnail ml-1 mb-1" src="./img/camiseta/thumbs/blanca.jpg" alt="blanca">
+            <img class="row cursor-mano img-thumbnail ml-1 mb-1" src="./img/camiseta/thumbs/gris.jpg" alt="gris">
+            <img class="row cursor-mano img-thumbnail ml-1 mb-1" src="./img/camiseta/thumbs/negra.jpg" alt="negra">
+            <img class="row cursor-mano img-thumbnail ml-1 mb-1" src="./img/camiseta/thumbs/rojo.jpg" alt="rojo">
+            <img class="row cursor-mano img-thumbnail ml-1 mb-1" src="./img/camiseta/thumbs/rosa.jpg" alt="rosa">
+            <img class="row cursor-mano img-thumbnail ml-1 mb-1" src="./img/camiseta/thumbs/verde.jpg" alt="verde">
+        </div>
+        <div class="col-8 col-sm-5">
+            <img id="imagen-large" class="img-thumbnail" src="./img/camiseta/large/blanca.jpg" alt="blanca">
+        </div>
+        <div class="col-12 col-sm-5">
+            <h1 class="font-title mt-1">Camiseta de color <small id="color-camiseta">Blanca</small></h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Amet earum temporibus quis expedita asperiores! Aliquam obcaecati sequi ipsum 
+                odio voluptates nisi temporibus, unde nobis reiciendis fuga veritatis beatae dignissimos quas.
+
+            </p>
+        </div>
+    </div>
+    
+</div>
+    
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+(function(){
+
+    $(".cursor-mano").on("click",function(){
+        var nombre = $(this).attr("alt");
+        var src = "./img/camiseta/large/"+nombre+".jpg"
+        $("#imagen-large").attr("src",src);
+        var nameUperCase = nombre.charAt(0).toUpperCase()+nombre.slice(1);
+        $("#color-camiseta").text(nameUperCase);
+
+    });
+
+
+})();
+</script>
+</body>
+</html>
