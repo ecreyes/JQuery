@@ -90,4 +90,13 @@ $(".cursor-mano").on("mouseover",function(){
 $(".cursor-mano").on("mouseleave",function(){
 
 });
+
+//detener comportamiento de href
+$('#enlace').on("click",function(e){
+    e.preventDefault();
+    var link = $(this).attr("href") //el this hace referencia al mismo elemento que se selecciono.
+    //hacer algun comportamiento aquí...
+    //redirigir
+    window.location = link
+});
 ```
