@@ -44,7 +44,7 @@
 <script>
 (function(){
 
-    $(".cursor-mano").on("click",function(){
+    $(".cursor-mano").on("mouseover",function(){
         var nombre = $(this).attr("alt");
         var src = "./img/camiseta/large/"+nombre+".jpg"
         $("#imagen-large").attr("src",src);
